@@ -6,7 +6,7 @@ import jakarta.persistence.Entity;
 @Entity
 public class Flight extends PanacheEntity {
 
-    long travelOrderId;
-    String fromAirport;
-    String toAirport;
+    public Long travelOrderId;
+    public String fromAirport;
+    public String toAirport;
 }
