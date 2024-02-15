@@ -3,6 +3,7 @@ package org.acme.flight;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import org.acme.hotel.Hotel;
 
 import java.util.List;
 
@@ -20,6 +21,13 @@ public class FlightResource {
     @Path("findById")
     public Flight flightById(@QueryParam("id") long id) {
         return Flight.findById(id);
+    }
+
+    @GET
+    @Path("findByTravelOrderId")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Flight findByTravelOrderId(@QueryParam("travelOrderId") long travelOrderId) {
+        return Flight.findByTravelOrderId(travelOrderId);
     }
 
     @Transactional
