@@ -24,7 +24,7 @@ public class HotelResource {
 
     @GET
     @Path("findById")
-    public Hotel hotelById(@QueryParam("id") long id) {
+    public Hotel findById(@QueryParam("id") long id) {
         return Hotel.findById(id);
     }
 

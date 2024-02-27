@@ -1,6 +1,5 @@
 package org.acme.travelorder;
 
-import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
@@ -11,7 +10,7 @@ public interface FlightService {
     @GET
     @Path("findById")
     @Produces(MediaType.APPLICATION_JSON)
-    public Flight flightById(@QueryParam("id") long id);
+    public Flight findById(@QueryParam("id") long id);
 
     @GET
     @Path("findByTravelOrderId")

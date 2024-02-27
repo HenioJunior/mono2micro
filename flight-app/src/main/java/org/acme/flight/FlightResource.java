@@ -18,7 +18,7 @@ public class FlightResource {
 
     @GET
     @Path("findById")
-    public Flight flightById(@QueryParam("id") long id) {
+    public Flight findById(@QueryParam("id") long id) {
         return Flight.findById(id);
     }
 

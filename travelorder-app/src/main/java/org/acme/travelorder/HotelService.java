@@ -14,7 +14,7 @@ public interface HotelService {
 
     @GET
     @Path("findById")
-    public Hotel hotelById(@QueryParam("id") long id);
+    public Hotel findById(@QueryParam("id") long id);
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
